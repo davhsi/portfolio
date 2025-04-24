@@ -4,8 +4,8 @@ import { ExternalLink, Github, Database, Server, Code, Webhook, Cloud } from "lu
 export default function Projects() {
   const projects = [
     {
-      title: "FreshFleet - Fleet Management System",
-      desc: "Developed a comprehensive fleet management system for tracking and managing vehicle fleets. Features include real-time vehicle tracking, maintenance scheduling, driver management, and route optimization. Built with modern web technologies and integrated with GPS tracking systems.",
+      title: "FreshFleet - Health Focused Grocery Shopping",
+      desc: "Built a full-stack MERN-based online grocery platform focused on health-conscious shopping. Implemented core backend functionalities for seamless user experience including product browsing, vendor management, reviews, nutrition insights, and recipe recommendations. Integrated AWS S3 for secure image storage and used AWS CloudFront as a CDN for fast, scalable image delivery.",
       role: "Full Stack Developer",
       teamSize: "3",
       duration: "2 months",
