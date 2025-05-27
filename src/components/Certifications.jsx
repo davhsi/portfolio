@@ -1,5 +1,6 @@
 import React from "react";
-import { Award, Presentation, Code, Network } from "lucide-react";
+import { Award, Presentation, Code, Network, FileCheck, Trophy } from "lucide-react";
+import AnimatedTitle from "./AnimatedTitle";
 
 export default function Certifications() {
   const certifications = [
@@ -30,12 +31,37 @@ export default function Certifications() {
       icon: <Presentation className="w-6 h-6" />,
       date: "October 2023",
       description: "Presented research paper on the integration of Blockchain technology with Generative AI applications."
-    }
+    },
+    {
+      title: "Certified Kubernetes Administrator (CKA)",
+      issuer: "Cloud Native Computing Foundation (CNCF)",
+      date: "Expected 2025",
+      icon: <FileCheck className="w-6 h-6" />,
+    },
+    {
+      title: "AWS Certified Solutions Architect - Associate",
+      issuer: "Amazon Web Services (AWS)",
+      date: "Expected 2025",
+      icon: <FileCheck className="w-6 h-6" />,
+    },
+  ];
+
+  const achievements = [
+    {
+      title: "Winner, National Level Hackathon",
+      description: "Secured first place in a national level hackathon, developing a real-time collaborative coding platform.",
+      icon: <Trophy className="w-6 h-6" />,
+    },
+    {
+      title: "Top 10% in Competitive Programming",
+      description: "Consistently ranked in the top 10% in various competitive programming contests.",
+      icon: <Trophy className="w-6 h-6" />,
+    },
   ];
 
   return (
     <div className="animate-fade-in">
-      <h2 className="text-4xl font-bold mb-12 text-center text-violet-300">Certifications & Achievements</h2>
+      <AnimatedTitle title="Certifications & Achievements" />
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {certifications.map((cert, index) => (
@@ -58,7 +84,6 @@ export default function Certifications() {
         ))}
       </div>
 
-      {/* Additional Achievements Section */}
       <div className="mt-12">
         <h3 className="text-2xl font-bold mb-6 text-center text-violet-300">Additional Achievements</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -77,6 +102,21 @@ export default function Certifications() {
             <h4 className="text-lg font-semibold mb-2 text-violet-300">Leadership</h4>
             <p className="text-violet-200">Led various technical projects and team collaborations</p>
           </div>
+        </div>
+      </div>
+
+      <div className="mt-12">
+        <h3 className="text-2xl font-bold mb-6 text-center text-violet-300">Additional Achievements</h3>
+        <div className="space-y-4">
+          {achievements.map((ach, index) => (
+            <div key={index} className="card bg-slate-800/80 p-6 rounded-lg flex items-start space-x-4 hover:scale-105 transition-transform">
+              <div className="text-violet-400">{ach.icon}</div>
+              <div>
+                <h4 className="font-semibold text-violet-300">{ach.title}</h4>
+                <p className="text-violet-200 text-sm mt-1">{ach.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

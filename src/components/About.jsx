@@ -3,6 +3,7 @@ import {
   FaCode, FaServer, FaDatabase, FaGitAlt, FaGithub, FaNodeJs, FaReact, FaHtml5, FaCss3Alt, FaPython, FaJava, FaLinux, FaFigma
 } from "react-icons/fa";
 import { SiC, SiJavascript, SiExpress, SiMongodb, SiPostman } from "react-icons/si";
+import AnimatedTitle from "./AnimatedTitle";
 
 export default function About() {
   const skills = [
@@ -59,8 +60,8 @@ export default function About() {
   ];
 
   return (
-    <div className="animate-fade-in">
-      <h2 className="text-4xl font-bold mb-8 text-center text-violet-300">About Me</h2>
+    <div className="">
+      <AnimatedTitle title="About Me" />
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* About Text */}
@@ -88,7 +89,10 @@ export default function About() {
         {/* Skills Grid */}
         <div className="grid grid-cols-2 gap-6">
           {skills.map((skill, index) => (
-            <div key={index} className="card bg-slate-800/80 hover:scale-105 transition-transform group">
+            <div 
+              key={index} 
+              className="card bg-slate-800/80 hover:scale-105 transition-transform group"
+            >
               <div className="flex items-center gap-2 mb-3">
                 <div className="text-violet-400 group-hover:animate-pulse">{skill.icon}</div>
                 <h3 className="font-semibold text-violet-300 group-hover:text-violet-200 transition-colors">{skill.name}</h3>

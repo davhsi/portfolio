@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Mail, Phone, Linkedin, Github, Send } from "lucide-react";
+import AnimatedTitle from "./AnimatedTitle";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -23,8 +24,13 @@ export default function Contact() {
 
   return (
     <div className="animate-fade-in">
-      <h2 className="text-4xl font-bold mb-12 text-center text-violet-300">Get in Touch</h2>
-      
+      <AnimatedTitle title="Get in Touch" />
+
+      <p className="text-lg text-center text-violet-200 mb-12">
+        I'm currently looking for new opportunities and my inbox is always open.
+        Whether you have a question or just want to say hi, I'll do my best to get back to you!
+      </p>
+
       <div className="grid md:grid-cols-2 gap-12">
         {/* Contact Information */}
         <div className="space-y-8">
@@ -44,13 +50,6 @@ export default function Contact() {
               >
                 <Mail className="w-5 h-5" />
                 <span>davish.cs22@bitsathy.ac.in</span>
-              </a>
-              <a 
-                href="tel:+919489483316" 
-                className="flex items-center gap-3 text-violet-200 hover:text-violet-400 transition-colors"
-              >
-                <Phone className="w-5 h-5" />
-                <span>+91 94894 83316</span>
               </a>
               <a 
                 href="https://linkedin.com/in/edavish" 
@@ -75,7 +74,6 @@ export default function Contact() {
             <h3 className="text-2xl font-bold mb-6 text-violet-300">Personal Details</h3>
             <div className="space-y-2">
               <p className="text-violet-200"><span className="font-medium text-violet-300">Name:</span> Davish E</p>
-              <p className="text-violet-200"><span className="font-medium text-violet-300">D.O.B:</span> 22.06.2004</p>
               <p className="text-violet-200"><span className="font-medium text-violet-300">Location:</span> Tirunelveli, Tamil Nadu</p>
               <p className="text-violet-200"><span className="font-medium text-violet-300">Languages:</span> Tamil (W,R,S), English (W,R,S)</p>
             </div>

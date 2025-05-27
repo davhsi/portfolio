@@ -1,5 +1,6 @@
 import React from "react";
 import { GraduationCap, Award, BookOpen } from "lucide-react";
+import AnimatedTitle from "./AnimatedTitle";
 
 export default function Education() {
   const education = [
@@ -34,7 +35,7 @@ export default function Education() {
 
   return (
     <div className="animate-fade-in">
-      <h2 className="text-4xl font-bold mb-12 text-center text-violet-300">Education</h2>
+      <AnimatedTitle title="Education" />
       
       <div className="relative">
         {/* Timeline Line */}
